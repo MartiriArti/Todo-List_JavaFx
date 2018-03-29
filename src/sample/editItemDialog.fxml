@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<DialogPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditDialogController">
+    <headerText>
+        We could put something here
+    </headerText>
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label id="label" text="Short description" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField id="field" fx:id="shortDescriptionField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Details" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextArea fx:id="detailsField" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Deadline" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <DatePicker id="date-picker" fx:id="deadlinePicker" />
+            <Label prefHeight="20.0" prefWidth="69.0" text="Priority" AnchorPane.rightAnchor="210.0" />
+            <ChoiceBox fx:id="choiceBox" minHeight="-Infinity" minWidth="-Infinity" prefWidth="190.0" AnchorPane.rightAnchor="1.0" value="Normal Priority" >
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="High Priority" />
+                        <String fx:value="Normal Priority" />
+                        <String fx:value="Low Priority" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+            </AnchorPane>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+        </GridPane>
+    </content>
+</DialogPane>

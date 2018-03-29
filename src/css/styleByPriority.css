@@ -1,0 +1,131 @@
+#Low{
+    -fx-strikethrough: true;
+    -fx-stroke: ladder(-fx-base, white 49%, black 50%);
+    -fx-font-size: 16px;
+    -fx-alignment: "center";
+    -fx-border-color: rgba(249, 255, 0, 0.71);
+    -fx-border-width: 0 4 0 4;
+
+}
+
+#LowDone, #LowDone .text{
+    -fx-strikethrough: true;
+    -fx-font-size: 16px;
+    -fx-alignment: "center";
+    -fx-border-width: 0 4 0 4;
+    -fx-border-color: rgba(247, 255, 0, 0.37);
+}
+
+#Normal {
+    -fx-stroke: ladder(-fx-base, white 49%, black 50%);
+    -fx-font-size: 16px;
+    -fx-alignment: "center";
+    -fx-border-width: 0 4 0 4;
+    -fx-border-color: rgba(5, 255, 0, 0.71);
+}
+
+#NormalDone, #NormalDone .text{
+    -fx-strikethrough: true;
+    -fx-font-size: 16px;
+    -fx-alignment: "center";
+    -fx-border-width: 0 4 0 4;
+    -fx-border-color: rgba(5, 155, 0, 0.54);
+}
+
+#High {
+    -fx-alignment: "center";
+    -fx-font-size: 16px;
+    -fx-border-width: 0 4 0 4;
+    -fx-border-color: rgba(255, 3, 0, 0.71);
+}
+
+#HighDone, #HighDone .text{
+    -fx-strikethrough: true;
+    -fx-font-size: 16px;
+    -fx-alignment: "center";
+    -fx-border-width: 0 4 0 4;
+    -fx-border-color: rgba(155, 3, 0, 0.51);
+}
+
+#empty{
+    -fx-background-color: white;
+
+}
+
+#toDoListView:focused .cell:filled:focused:selected {
+    -fx-background-color: rgba(0, 130, 178, 0.56);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+#toDoListView:hover .cell:hover {
+    -fx-background-color:  #0096c9;
+    -fx-text-fill:  white;
+}
+
+.cell {
+    -fx-cell-size: 40;
+}
+
+.text {
+    -fx-font-smoothing-type: gray;
+}
+
+#text-area, #field2 {
+    -fx-background-color: transparent;
+    -fx-background-radius: 2.0;
+    -fx-padding: 0.5em 0.5em 0.5em 0.1em;
+    -fx-border-color: -swatch-grey;
+    -fx-border-width: 0 0 2 0;
+    -fx-prompt-text-fill: derive(-dark, 50.0%);
+    -fx-highlight-fill: rgb(94.0, 203.0, 234.0);
+}
+
+#text-area {
+    -fx-padding: 0.15em;
+}
+
+#text-area .content {
+    -fx-padding: 0.7em;
+    -fx-border-width: 0.0;
+    -fx-background-color: transparent;
+}
+
+#text-area:focused  .content {
+    -fx-background-color: transparent;
+}
+
+#tool-bar { /* top */
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: grey;
+    -fx-min-height: 48;
+    -fx-alignment: CENTER_LEFT;
+}
+
+#field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 2 0 ;
+    -fx-background-radius: 0 ;
+}
+
+#field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+ #srtA:hover, #srtP:hover,#srtD:hover, #add:hover{
+    -fx-text-fill: white;
+     -fx-background-color:  #0096c9;
+}
+
+#separator {
+    -fx-padding: 5 10 5 10;
+}
+
+#choiceBox .list-cell
+{
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em;
+}
